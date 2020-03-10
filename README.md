@@ -19,7 +19,6 @@ CSS 编译器：Sass
 
 gulp4 watch 存在问题 已经解决！
 
-<<<<<<< HEAD
 所有 js 必须通过模块开发实现
 
 require.js
