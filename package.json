@@ -1,0 +1,28 @@
+{
+  "name": "xiaomi",
+  "version": "1.0.0",
+  "description": "这是一个电商网站的实战项目 敬请期待",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Majichao0530/E-commerce-website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Majichao0530/E-commerce-website/issues"
+  },
+  "homepage": "https://github.com/Majichao0530/E-commerce-website#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.7.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-scss": "^1.4.0",
+    "gulp-watch": "^5.0.1"
+  }
+}
