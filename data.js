@@ -350,7 +350,7 @@ define(["jquery"], function($) {
     });
   }
 
-  //   鼠标移入切换热门和副标题列表的实现
+  //   鼠标移入切换热门和副标题列表的实现【事件委托】
   function subListTab() {
     $(".page-main .container").on(
       "mouseenter",

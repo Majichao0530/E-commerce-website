@@ -218,7 +218,10 @@ define(["jquery"], function($) {
           .css("display", "none");
       } else {
         // 解决服务、社区显示菜单不消失问题
-        $("#J_navMenu").css({ display: "none" });
+        $("#J_navMenu")
+          .css({ display: "block" })
+          .removeClass("slide-down")
+          .addClass("slide-up");
       }
       // 解决浮动菜单消失问题
       $("#J_navMenu .container")
@@ -266,6 +269,26 @@ define(["jquery"], function($) {
       });
   }
 
+  // 侧边导航效果隐藏效果
+  function allGoodsTab() {
+    $(".header-nav .nav-list").on("mouseenter", ".nav-category", function() {
+      $(this).addClass("nav-category-active");
+      $(this)
+        .find(".site-category")
+        .css("display", "block");
+      $("#J_navMenu")
+        .css({ display: "block" })
+        .removeClass("slide-down")
+        .addClass("slide-up");
+    });
+    $(".header-nav .nav-list").on("mouseleave", ".nav-category", function() {
+      $(this).removeClass("nav-category-active");
+      $(this)
+        .find(".site-category")
+        .css("display", "none");
+    });
+  }
+
   return {
     download,
     banner,
@@ -273,6 +296,7 @@ define(["jquery"], function($) {
     leftNavTab,
     topNavDownload,
     topNavTab,
-    searchTab
+    searchTab,
+    allGoodsTab
   };
 });
