@@ -107,7 +107,7 @@ define(["jquery"], function($) {
         var sideArr = result.sideNav;
         for (var i = 0; i < sideArr.length; i++) {
           var node = $(`<li class = 'category-item'>
-            <a href="/index.html" class = 'title'>
+            <a href="/list.html" class = 'title'>
             ${sideArr[i].title}
                 <em class = 'iconfont-arrow-right-big'></em>
             </a>
