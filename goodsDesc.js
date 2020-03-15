@@ -1,4 +1,4 @@
-define(["jquery", "jquery.cookie"], function($) {
+define(["jquery", "jquery-cookie"], function($) {
   // 封装获取当前商品的product_id函数
   function valueByName(search, name) {
     // 查找键值对开始和结束的位置
@@ -303,7 +303,6 @@ define(["jquery", "jquery.cookie"], function($) {
           expires: 7
         });
       }
-      alert($.cookie("goods"));
       return false;
     });
   }
