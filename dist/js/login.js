@@ -1,20 +1,16 @@
 define(["jquery"], function($) {
-  function registerSend() {
-    $("#register-button").click(function() {
+  function loginSend() {
+    $("#login-button").click(function() {
       $.ajax({
         type: "post",
-        url: "./php/register.php",
+        url: "./php/login.php",
         data: {
           username: $(".item_account")
             .eq(0)
             .val(),
           password: $(".item_account")
             .eq(1)
-            .val(),
-          repassword: $(".item_account")
-            .eq(2)
-            .val(),
-          createtime: new Date().getTime()
+            .val()
         },
         success: function(result) {
           // 解析返回的JSON字符串
@@ -31,7 +27,7 @@ define(["jquery"], function($) {
               .find("span")
               .css("color", "hotpink");
             setTimeout(function() {
-              location.assign("login.html");
+              location.assign("/index.html");
             }, 1000);
           }
           $(".err_tip")
@@ -45,7 +41,8 @@ define(["jquery"], function($) {
       });
     });
   }
+
   return {
-    registerSend
+    loginSend
   };
 });
